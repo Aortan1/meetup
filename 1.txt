@@ -1,0 +1,16 @@
+
+
+Открыть баш в созданной папке проекта.
+//npm install vue-cli -g
+vue init webpack-simple .
+npm install
+npm run dev
+
+npm install vuetify
+
+npm install axios
+
+
+
+
+
