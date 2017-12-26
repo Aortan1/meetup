@@ -23,6 +23,7 @@ Vue.use(Vuetify, {
         // secondary: '#b0bec5',
         secondary: 'rgb(238,255,65)', //lime accent-2
         //secondary: "orange",
+        info: 'DarkTurquoise ',
         accent: '#8c9eff',
         error: '#b71c1c'
     }
