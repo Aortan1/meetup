@@ -1,17 +1,35 @@
 <template>
-    <v-container>
-        <v-layout row wrap>
+
+    <!--<v-container style="margin-top: 0;">-->
+
+        <!--<v-layout row wrap>-->
+            <!--<v-flex xs12 sm6 class="text-xs-center text-sm-right">-->
+                <!--<v-btn large to="/meetups" class="info">Explore Meetups</v-btn>-->
+            <!--</v-flex>-->
+            <!--<v-flex xs12 sm6 class="text-xs-center text-sm-left">-->
+                <!--<v-btn large to="/meetup/new" class="info">Organize Meetup</v-btn>-->
+            <!--</v-flex>-->
+        <!--</v-layout>-->
+    <!--</v-container>-->
+
+
+    <v-container mt-0>
+    <!--<v-container  style="border: 2px double green; position: absolute; top: 60px;">-->
+        <v-layout row wrap mb-2>
             <v-flex xs12 sm6 class="text-xs-center text-sm-right">
-                <v-btn large router to="/meetups" class="info">Explore Meetups</v-btn>
+                <v-btn large to="/meetups" class="info">Explore Meetups</v-btn>
             </v-flex>
             <v-flex xs12 sm6 class="text-xs-center text-sm-left">
-                <v-btn large router to="/meetup/new" class="info">Organize Meetup</v-btn>
+                <v-btn large to="/meetup/new" class="info">Organize Meetup</v-btn>
             </v-flex>
         </v-layout>
+
         <v-layout row wrap>
             <v-flex sx12>
                 <v-carousel>
-                    <v-carousel-item v-for="meetup in meetups" v-bind:src="meetup.imageUrl" :key="meetup.id"></v-carousel-item>
+                    <v-carousel-item v-for="meetup in meetups" v-bind:src="meetup.imageUrl" :key="meetup.id">
+                        <div class="title"> {{ meetup.title }}</div>
+                    </v-carousel-item>
                 </v-carousel>
             </v-flex>
         </v-layout>
@@ -33,9 +51,18 @@
     }
 </script>
 
-<style>
+<style scoped>
     h1{
         color: green;
+    }
+    .title{
+        background-color: rgba(0,0,0,0.7);
+        color: rgba(255,255,255,0.8);
+        font-size: 1.5em!important;
+        padding: 10px;
+        position: absolute;
+        bottom: 60px;
+
     }
 
 </style>

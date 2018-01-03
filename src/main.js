@@ -4,6 +4,10 @@ import Vuetify from 'vuetify'
 import VueRouter from 'vue-router'
 import router from './router'
 
+// VUETIFY - библиотека визуальных компонентов, реализующих Material Design на Vue Js.
+
+
+
 Vue.use(VueRouter)
 
 // Vue.use(Vuetify)

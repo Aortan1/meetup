@@ -9,7 +9,7 @@
         name: 'Signup',
         data: function() {
             return {
-                x: "Hellooooo, Up!"
+                x: "Hellooooo, new Body!"
             }
         }
     }

@@ -2,7 +2,7 @@
 import VueRouter from 'vue-router'
 import Hello from '../components/Hello.vue'
 
-import Home from '../components/Home.vue'
+import Home from '../components/Home.vue' // @ - означает папку src, НЕ РАБОТАЕТ В 17й версии vuetify.
 import Meetups from '../components/Meetup/Meetups.vue'
 import CreateMeetup from '../components/Meetup/CreateMeetup.vue'
 import Profile from '../components/User/Profile.vue'

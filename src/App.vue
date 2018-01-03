@@ -5,7 +5,6 @@
         <v-list-tile
                 v-for="item in menuItems"
                 :key="item.title"
-                router
                 :to="item.link"
         >
           <v-list-tile-action>
@@ -19,11 +18,13 @@
 
     <v-toolbar class="primary"> <!-- верхняя менюшка -->
 
+      <v-toolbar-side-icon @click.native.stop = "sideNav=!sideNav" class="hidden-sm-and-up"></v-toolbar-side-icon>
+      <!--hidden-sm-and-up  - иконка СКРЫТА на малых экранах И ВЫШЕ (Т.Е. НА БОЛЬШПХ) -->
+
       <v-toolbar-title>
         <router-link to="/" tag="span" style="cursor: pointer;">DevMeetup </router-link>
       </v-toolbar-title>
-      <v-toolbar-side-icon @click.native.stop = "sideNav=!sideNav" class="hidden-sm-and-up"></v-toolbar-side-icon>
-      <!--hidden-sm-and-up  - иконка СКРЫТА на малый экранах И ВЫШЕ (Т.Е. НА БОЛЬШПХ) -->
+
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only"> <!-- пункты менюшки -->
 
@@ -31,7 +32,6 @@
                 flat
                 v-for="item in menuItems"
                 :key="item.title"
-                router
                 :to="item.link"
         >
           <v-icon left dark> {{ item.icon }} </v-icon>
